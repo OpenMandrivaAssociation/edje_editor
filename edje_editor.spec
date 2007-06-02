@@ -13,7 +13,7 @@ Source1:	%name.desktop
 URL:		http://www.enlightenment.org/
 BuildRoot:      %{_tmppath}/%{name}-buildroot
 BuildRequires: 	evas-devel >= 0.9.9.038, engrave-devel >= 0.1.0, edje-devel >= 0.5.0.038
-Buildrequires:	ecore-devel >= 0.9.9.038, etk-devel >= 0.1.0.003
+Buildrequires:	ecore-devel >= 0.9.9.038, etk-devel >= 0.1.0.003, edje >= 0.5.0.038
 Requires: 	evas >= 0.9.9.038, edje >= 0.5.0.038
 BuildRequires:  ImageMagick, flex
 BuildRequires:  desktop-file-utils
