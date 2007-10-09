@@ -2,7 +2,7 @@
 %define version 0.1.4
 %define release %mkrel 1
 
-Summary:	Edje_editor is an visual editor for edje file.
+Summary:	Edje_editor is an visual editor for edje file
 Name:		%name
 Version:	%version
 Release:	%release
