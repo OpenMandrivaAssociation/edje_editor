@@ -35,19 +35,7 @@ rm -rf $RPM_BUILD_ROOT
 %install
 %makeinstall_std
 
-mkdir -p $RPM_BUILD_ROOT%{_menudir}
 
-cat << EOF > $RPM_BUILD_ROOT%{_menudir}/%{name}
-?package(%{name}):\
-        needs="X11" \
-        section="Multimedia/Graphics" \
-        title="%name" \
-        longtitle="%name " \
-        command="%{_bindir}/%name -e x11" \
-        icon="expedite.png" \
-        startup_notify="true" \
-        xdg="true"
-EOF
 
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications/
 cp -vf %{SOURCE1} $RPM_BUILD_ROOT%{_datadir}/applications/
@@ -80,7 +68,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc  AUTHORS COPYING* README
 %{_bindir}/%name
 %{_datadir}/%name
-%{_menudir}/*
 %_liconsdir/*.png
 %_iconsdir/*.png
 %_miconsdir/*.png
