@@ -1,6 +1,7 @@
 %define name edje_editor
 %define version 0.1.4
-%define release %mkrel 1
+%define cvs	20080208
+%define release %mkrel %{cvs}.1
 
 Summary:	Edje_editor is an visual editor for edje file
 Name:		%name
@@ -8,24 +9,24 @@ Version:	%version
 Release:	%release
 License: 	BSD
 Group: 		Graphical desktop/Enlightenment
-Source:		ftp://ftp.enlightenment.org/pub/enlightenment/%{name}-%{version}.tar.bz2
+Source:		%{name}-%{cvs}.tar.bz2
 Source1:	%name.desktop
 URL:		http://www.enlightenment.org/
 BuildRoot:      %{_tmppath}/%{name}-buildroot
-BuildRequires: 	evas-devel >= 0.9.9.038, engrave-devel >= 0.1.0, edje-devel >= 0.5.0.038
-Buildrequires:	ecore-devel >= 0.9.9.038, etk-devel >= 0.1.0.003, edje >= 0.5.0.038
-Requires: 	evas >= 0.9.9.038, edje >= 0.5.0.038
+BuildRequires:	edje-devel edje
+BuildRequires: 	evas-devel
+BuildRequires:	engrave-devel
+Buildrequires:	ecore-devel
+BuildRequires:	etk-devel
+Requires: 	edje
 BuildRequires:  ImageMagick, flex
 BuildRequires:  desktop-file-utils
 
 %description
-Edje_editor is an visual editor for edje file.
-This is a prealpha state, don't expect nothing.
+Edje_editor is a visual editor for edje file
 
 %prep
-rm -rf $RPM_BUILD_ROOT
-
-%setup -q
+%setup -q -n %name
 
 %build
 ./autogen.sh
@@ -34,8 +35,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %install
 %makeinstall_std
-
-
 
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications/
 cp -vf %{SOURCE1} $RPM_BUILD_ROOT%{_datadir}/applications/
@@ -52,7 +51,6 @@ convert -resize 16x16 data/images/e17.png %buildroot%_miconsdir/%name.png
 
 mkdir -p %buildroot%{_datadir}/pixmaps
 cp data/images/e17.png %buildroot%{_datadir}/pixmaps/%name.png
-
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -71,6 +69,7 @@ rm -rf $RPM_BUILD_ROOT
 %_liconsdir/*.png
 %_iconsdir/*.png
 %_miconsdir/*.png
+%_iconsdir/hicolor/48x48/apps/edje_editor.png
 %_datadir/pixmaps/*.png
 %{_datadir}/applications/*
 
