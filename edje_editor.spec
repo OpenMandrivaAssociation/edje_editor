@@ -3,7 +3,7 @@
 %define cvs	20080208
 %define release %mkrel %{cvs}.1
 
-Summary:	Edje_editor is an visual editor for edje file
+Summary:	Visual editor for edje file
 Name:		%name
 Version:	%version
 Release:	%release
