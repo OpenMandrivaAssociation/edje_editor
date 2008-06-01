@@ -29,11 +29,12 @@ Edje_editor is a visual editor for edje file
 %setup -q -n %name
 
 %build
-./autogen.sh
+NOCONFIGURE=1 ./autogen.sh
 %configure2_5x
 %make
 
 %install
+rm -f %buildroot
 %makeinstall_std
 
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications/
