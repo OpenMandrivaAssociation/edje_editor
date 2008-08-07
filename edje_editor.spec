@@ -1,7 +1,7 @@
 %define name edje_editor
 %define version 0.1.4
 %define cvs	20080208
-%define release %mkrel %{cvs}.1
+%define release %mkrel %{cvs}.2
 
 Summary:	Visual editor for edje file
 Name:		%name
