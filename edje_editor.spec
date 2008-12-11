@@ -19,7 +19,7 @@ BuildRequires:	engrave-devel
 Buildrequires:	ecore-devel
 BuildRequires:	etk-devel
 Requires: 	edje
-BuildRequires:  ImageMagick, flex
+BuildRequires:  imagemagick, flex
 BuildRequires:  desktop-file-utils
 
 %description
