@@ -25,7 +25,7 @@ BuildRequires:  desktop-file-utils
 Edje_editor is a visual editor for edje file
 
 %prep
-%setup -q -n %name
+%setup -q -n %name-%version
 
 %build
 NOCONFIGURE=1 ./autogen.sh
