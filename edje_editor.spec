@@ -1,7 +1,7 @@
 %define name edje_editor
-%define version 0.1.4
-%define cvs	20080208
-%define release %mkrel %{cvs}.2
+%define version 0.3.2
+%define svn	20090227
+%define release %mkrel 1
 
 Summary:	Visual editor for edje file
 Name:		%name
@@ -9,16 +9,15 @@ Version:	%version
 Release:	%release
 License: 	BSD
 Group: 		Graphical desktop/Enlightenment
-Source:		%{name}-%{cvs}.tar.bz2
+Source:		%{name}-%{version}.tar.bz2
 Source1:	%name.desktop
 URL:		http://www.enlightenment.org/
 BuildRoot:      %{_tmppath}/%{name}-buildroot
-BuildRequires:	edje-devel edje
-BuildRequires: 	evas-devel
-BuildRequires:	engrave-devel
-Buildrequires:	ecore-devel
+BuildRequires:	edje-devel >= 0.9.9.050, edje >= 0.9.9.050
+BuildRequires: 	evas-devel >= 0.9.9.050
+Buildrequires:	ecore-devel >= 0.9.9.050
 BuildRequires:	etk-devel
-Requires: 	edje
+Requires: 	edje >= 0.9.9.050
 BuildRequires:  imagemagick, flex
 BuildRequires:  desktop-file-utils
 
