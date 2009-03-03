@@ -73,7 +73,6 @@ rm -rf $RPM_BUILD_ROOT
 %_liconsdir/*.png
 %_iconsdir/*.png
 %_miconsdir/*.png
-%_iconsdir/hicolor/48x48/apps/edje_editor.png
 %_datadir/pixmaps/*.png
 %{_datadir}/applications/*
 
