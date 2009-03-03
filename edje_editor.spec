@@ -16,7 +16,7 @@ BuildRoot:      %{_tmppath}/%{name}-buildroot
 BuildRequires:	edje-devel >= 0.9.9.050, edje >= 0.9.9.050
 BuildRequires: 	evas-devel >= 0.9.9.050
 Buildrequires:	ecore-devel >= 0.9.9.050
-BuildRequires:	etk-devel
+BuildRequires:	etk-devel >= 0.1.0.42
 Requires: 	edje >= 0.9.9.050
 BuildRequires:  imagemagick, flex
 BuildRequires:  desktop-file-utils
