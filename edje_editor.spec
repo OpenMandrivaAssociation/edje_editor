@@ -1,7 +1,7 @@
 %define name edje_editor
 %define version 0.3.2
 %define svn	20090227
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary:	Visual editor for edje file
 Name:		%name
