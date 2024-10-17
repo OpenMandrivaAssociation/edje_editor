@@ -10,7 +10,7 @@ Release:	%release
 License: 	BSD
 Group: 		Graphical desktop/Enlightenment
 Source:		%{name}-%{version}.tar.bz2
-URL:		http://www.enlightenment.org/
+URL:		https://www.enlightenment.org/
 BuildRoot:      %{_tmppath}/%{name}-buildroot
 BuildRequires:	edje-devel >= 0.9.9.050, edje >= 0.9.9.050
 BuildRequires: 	evas-devel >= 0.9.9.052
