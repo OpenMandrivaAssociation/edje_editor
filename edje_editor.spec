@@ -12,6 +12,11 @@ Group: 		Graphical desktop/Enlightenment
 Source:		%{name}-%{version}.tar.bz2
 URL:		https://www.enlightenment.org/
 BuildRoot:      %{_tmppath}/%{name}-buildroot
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	edje-devel >= 0.9.9.050, edje >= 0.9.9.050
 BuildRequires: 	evas-devel >= 0.9.9.052
 Buildrequires:	ecore-devel >= 0.9.9.050
